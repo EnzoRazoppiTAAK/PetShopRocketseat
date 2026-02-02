@@ -1,0 +1,198 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 1px solid red; */
+}
+
+:root{
+    --content-primary:#FFFFFF;
+    --content-secondary:#98959D;
+    --content-tertiary: #666666;
+    --content-brand: #9282FA;
+
+    --background-primary:#151515;
+    --background-secondary: #1E1E1E;
+    --background-tertiary: #23242C;
+    --background-brand: #9282FA;
+    --background-highlights:#BDB4FA;
+
+    --border-primary: #3E3C41;
+    --border-secondary: #86818C;
+    --border-brand: #9282FA;
+    --border-divisor:#353339;
+
+    --titles: 700 1.5rem/200% "Inter Tight", sans-serif;
+    --interFont: "Inter", sans-serif;
+
+    --paragraphMedium: 600 0.875rem/150% var(--interFont);
+    --paragraphSmall: 600 0.75rem/100% var(--interFont);
+    --labelLarge: 700 1rem/150% var(--interFont);
+    --labelMedium: 700 0.875rem/150% var(--interFont);
+    --labelSmall: 700 0.75rem/100% var(--interFont);
+    --link: 600 0.75rem/100% var(--interFont);
+}
+
+body{
+    background-color: var(--background-secondary);
+}
+
+.logo{
+    display: inline-flex;
+    gap: 4px;
+    padding: 12px 20px;
+    background-color: var(--background-tertiary);
+    width: auto;
+    font: var(--labelLarge);
+    font-size: 16px;
+    color: var(--content-brand);
+    border-bottom-right-radius: 8px;
+}
+
+.container{
+    margin: 40px 340px 80px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+
+    & h1{
+        font: var(--titles);
+        color: var(--content-primary);
+        margin-bottom: 4px;
+    }
+
+    & p{
+        font: var(--paragraphMedium);
+        color: var(--content-secondary);
+    }
+
+    & input{
+        position: relative;
+        height: 40px;
+        border: 1px solid var(--border-primary);
+        border-radius: 8px;
+        background-color: var(--background-secondary);
+        font: var(--labelLarge);
+        color: var(--content-secondary);
+        padding: 12px;
+
+        &::-webkit-calendar-picker-indicator{
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            background: url(../../assets/calendar-icon.svg) center/contain;
+            right: 8px;
+            top: 8px;
+            width: 1.25rem;
+            height: 1.25rem;
+        }
+    }
+}
+
+.periodoHeadline{
+    display: flex;
+    padding: 12px 20px;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+
+    & h3{
+        font: var(--labelLarge);
+        color: var(--content-primary);
+    }
+
+
+    & span{
+        margin-left: auto;
+        font: var(--labelLarge);
+        color: var(--content-secondary);
+    }
+}
+
+ul{
+    list-style: none;
+    padding-inline: 20px;
+
+    & li:first-child{
+        padding-top: 20px;
+    }
+    & li:last-child{
+        padding-bottom: 20px;
+    }
+
+    & li{
+        border-top: 1px solid rgb(48, 48, 48);
+        padding-block: 12px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .schedule{
+            display: flex;
+            gap: 16px;
+            font: var(--labelMedium);
+            color: var(--content-primary);
+            
+            & .name-identification{
+                & span:first-child{
+                    font:  var(--labelSmall);
+                }
+
+                & span:last-child{
+                    font: var(--paragraphSmall);
+                    color: var(--content-secondary);
+                }
+            }
+        }
+
+        & .service{
+            font: var(--paragraphSmall);
+            color: var(--content-secondary);
+        }
+
+        & .remove{
+            font: var(--paragraphSmall);
+            color: var(--content-tertiary);
+        }
+    }
+}
+
+.period{
+    background-color: var(--background-tertiary);
+    border-radius: 8px;
+}
+
+.afternoon{
+    margin-block: 12px;
+}
+
+.buttonToSchedule{
+    left: 80%;
+    bottom: 33px;
+    position: fixed;
+    & button{
+        padding: 12px 24px;
+        background-color: var(--content-brand);
+        font: var(--labelLarge);
+        color: #050505;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+    }
+
+    & button:hover{
+        background-color: var(--background-highlights);
+    }
+}
