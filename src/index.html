@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetShop</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/global.css">
+</head>
+<body>
+    <div class="logo">
+        <img src="assets/logo-icon.svg" alt="Logo">
+        <h2>MUNDO PET</h2>
+    </div>
+    <div class="container">
+
+        <main>
+            <header>
+                <div class="headline">
+                    <h1>Sua agenda</h1>
+                    <p>Aqui você pode ver todos os clientes e serviços agendados para hoje.</p>
+                </div>
+                <div class="dayChoosen">
+                    <input type="date" name="dayChoosen" id="dayChoosen">
+                </div>
+            </header>
+
+            <div class="morning period">
+                <div class="periodoHeadline">
+                    <img src="assets/morning-icon.svg" alt="">
+                    <h3>Manhã</h3>
+                    <span>09h-12h</span>
+                </div>
+                <ul class="morning-list">
+                </ul>
+            </div>
+            <div class="afternoon period">
+                 <div class="periodoHeadline">
+                     <img src="assets/afternoon-icon.svg" alt="">
+                     <h3>Tarde</h3>
+                     <span>13h-18h</span>
+                 </div>
+                <ul class="afternoon-list"></ul>
+                </ul>
+            </div>
+            <div class="evening period">
+                <div class="periodoHeadline">
+                    <img src="assets/evening-icon.svg" alt="">
+                    <h3>Noite</h3>
+                    <span>19h-21h</span>
+                </div>
+                <ul class="evening-list">
+                </ul>
+            </div>
+        </main>
+
+        <div class="buttonToSchedule">
+            <button id="newScheduleButton">NOVO AGENDAMENTO</button>
+        </div>
+
+        <form class="dontShowForms">
+            <div class="formHeadline">
+                <h2>Agende um atendimento</h2>
+                <p>Preencha os dados do cliente para realizar o agendamento:</p>
+            </div>
+
+            <div class="personNameInput">
+                <label>Nome do tutor</label>
+                <input type="text" name="personName" id="personName" placeholder="Helena Souza" required>
+            </div>
+
+            <div class="animalNameInput">
+                <label>Nome do pet</label>
+                <input type="text" name="animalName" id="animalName" placeholder="Cheddar" required>
+            </div>
+
+            <div class="phoneInput">
+                <label>Telefone</label>
+                <input type="tel" name="phone" id="phone" placeholder="(00) 00000-0000" required>
+            </div>
+
+             <div class="descriptionInput">
+                <label>Descrição do serviço</label>
+                <textarea rows="5" cols="30" name="Description" id="Description" placeholder="Banho e tosa" required></textarea>
+            </div>
+            <div class="input-date-time">
+                <div class="date">
+                    <label>Descrição do serviço</label>
+                    <input type="Date" name="Date" id="Date" required> 
+                </div>
+                <div class="time">
+                    <label>Descrição do serviço</label>
+                    <input type="time" name="time" id="time" required> 
+                </div>
+            </div>
+
+            <button>AGENDAR</button>
+            
+        </form>
+    </div>
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
